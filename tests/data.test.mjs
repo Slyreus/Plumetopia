@@ -210,6 +210,26 @@ test("les localisations publiques sont harmonisées sans anciens doublons", () =
   );
 });
 
+test("les brouillons ne conservent aucune ancienne traduction de localisation", async () => {
+  const source = await readFile(path.join(rootDirectory, "data", "birds.js"), "utf8");
+  const blockPattern = /createBird\(\{\s*id: "([^"]+)"[\s\S]*?\n\s*zones: \[(.*?)\],/g;
+  let match;
+  let draftCount = 0;
+
+  while ((match = blockPattern.exec(source))) {
+    const bird = INITIAL_BIRDS.find((item) => item.id === match[1]);
+    assert.ok(bird, match[1]);
+    assert.deepEqual(JSON.parse(`[${match[2]}]`), bird.zones, match[1]);
+    draftCount += 1;
+  }
+
+  assert.equal(draftCount, INITIAL_BIRDS.length);
+  assert.doesNotMatch(
+    source,
+    /Mont Onsen|Champ fleuri|Mer du Zéphyr|Nid des Centaines|tour aux cerfs|lac du cratère|Rivière Rosée|Zone centrale|Perchoir spécial|mer de la Baleine|littoral Est|falaise de pierre/i,
+  );
+});
+
 test("chaque oiseau possède une fiche statique indexable reliée au catalogue", async () => {
   const birdPageDirectory = path.join(rootDirectory, "oiseaux");
   const birdPages = (await readdir(birdPageDirectory)).filter((name) => name.endsWith(".html"));
