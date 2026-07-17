@@ -15,6 +15,7 @@ await rm(outputDirectory, { recursive: true, force: true });
 await mkdir(outputDirectory, { recursive: true });
 
 const rootFiles = [
+  "BingSiteAuth.xml",
   "index.html",
   "app.js",
   "admin.js",
