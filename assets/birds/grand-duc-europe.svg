@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Grand duc d'Europe</title>
+  <desc id="desc">Remplacer ce fichier par un screenshot du jeu.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eefaff"/>
+      <stop offset=".55" stop-color="#fff8ec"/>
+      <stop offset="1" stop-color="#f5f0ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <circle cx="695" cy="120" r="63" fill="#ffd36e"/>
+  <path d="M0 456c172-89 326-104 469-40 126 56 253 47 431-36v240H0Z" fill="#91d7c3"/>
+  <g transform="translate(456 302)">
+    <path d="M-152 114c-43-111 10-228 129-248 103-18 199 43 220 136 23 101-41 191-149 209-80 13-164-15-200-97Z" fill="#786a68"/>
+    <path d="M-129-68c-48-30-76-66-90-112 60 2 98 32 122 88Z" fill="#5a5051"/>
+    <path d="M101-78c35-48 76-72 133-72-18 48-51 83-104 108Z" fill="#5a5051"/>
+    <path d="M-93-21c28-34 72-42 111-17-36 33-74 42-111 17Z" fill="#ffe27a"/>
+    <path d="M54-32c39-28 82-24 114 8-36 24-75 22-114-8Z" fill="#ffe27a"/>
+    <circle cx="-42" cy="-21" r="13" fill="#332f35"/>
+    <circle cx="105" cy="-26" r="13" fill="#332f35"/>
+    <path d="M33 7 71 49H-2Z" fill="#e37d60"/>
+    <path d="M-77 84c76 44 156 40 239-13" fill="none" stroke="#4d4245" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, Segoe UI, sans-serif" text-anchor="middle">
+    <rect x="235" y="35" width="430" height="70" rx="35" fill="#fffffb" opacity=".88"/>
+    <text x="450" y="80" fill="#332f35" font-size="28" font-weight="800">Screenshot à ajouter</text>
+  </g>
+</svg>

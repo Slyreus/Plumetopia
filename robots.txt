@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+
+# Configurez SITE_URL avant publication pour générer la ligne Sitemap absolue.

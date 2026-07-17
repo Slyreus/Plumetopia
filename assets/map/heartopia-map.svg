@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder carte Heartopia</title>
+  <desc id="desc">Remplacer ce fichier par la vraie carte HD de Heartopia.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e8f9ff"/>
+      <stop offset=".52" stop-color="#fff8ed"/>
+      <stop offset="1" stop-color="#ecffd9"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" x2="1">
+      <stop offset="0" stop-color="#75d1e7"/>
+      <stop offset="1" stop-color="#7eaaf4"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#594050" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="42" fill="url(#sky)"/>
+  <path d="M82 598c164-126 336-147 520-103 163 39 313-49 482-30 184 20 314 112 433 259v113H82Z" fill="#bfe996"/>
+  <path d="M90 716c139-72 238-80 357-28 94 41 168 31 268-55 116-100 246-138 394-82 115 44 214 38 408-49v104c-179 95-322 111-469 45-113-51-186-29-290 62-142 126-305 143-477 64-67-31-123-25-191 15Z" fill="url(#water)" opacity=".9"/>
+  <path d="M130 520 278 267l126 108 99-171 175 324-98 156-186-96-95 134Z" fill="#bfb5c8" filter="url(#shadow)"/>
+  <path d="M278 267 321 502 404 375 439 650 503 204 678 528 523 478 473 684 394 588 299 722 254 507Z" fill="#978da1" opacity=".62"/>
+  <path d="M1022 304h138l30 282H988Z" fill="#d88973" filter="url(#shadow)"/>
+  <path d="M1002 280h178l-29-93h-119Z" fill="#ffad81"/>
+  <rect x="1054" y="352" width="39" height="58" rx="19" fill="#fff7d6"/>
+  <rect x="1126" y="352" width="39" height="58" rx="19" fill="#fff7d6"/>
+  <rect x="1080" y="471" width="51" height="115" rx="25" fill="#8b5e58"/>
+  <path d="M910 627c46-92 99-136 166-144 76-9 136 49 186 144Z" fill="#74bd7c"/>
+  <path d="M720 382c42-85 88-129 141-131 68-3 119 55 153 131Z" fill="#f4bad0"/>
+  <path d="M758 376c28-50 62-78 101-79 47-1 83 35 111 79Z" fill="#f2a6c1"/>
+  <path d="M642 724c68-54 146-74 235-56 92 18 158 72 200 161H596Z" fill="#f7d87b" opacity=".9"/>
+  <g font-family="Inter, Segoe UI, sans-serif" text-anchor="middle">
+    <rect x="443" y="68" width="714" height="92" rx="46" fill="#fffffb" opacity=".86"/>
+    <text x="800" y="108" fill="#332f35" font-size="34" font-weight="800">Placeholder carte Heartopia</text>
+    <text x="800" y="139" fill="#746c76" font-size="20">remplacer par la vraie carte HD du jeu</text>
+  </g>
+</svg>

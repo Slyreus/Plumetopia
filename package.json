@@ -1,0 +1,14 @@
+{
+  "name": "plumetopia",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "generate:art": "node scripts/generate-bird-art.mjs",
+    "generate:seo": "node scripts/generate-seo.mjs",
+    "build:pages": "node scripts/build-pages.mjs",
+    "generate": "node scripts/generate-bird-art.mjs && node scripts/generate-seo.mjs",
+    "test": "node --test --test-isolation=none tests/data.test.mjs"
+  }
+}

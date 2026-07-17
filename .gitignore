@@ -1,0 +1,8 @@
+_site/
+.plumetopia-server.pid
+.agents/
+.codex/
+.codex-spreadsheet/
+assets/birds/generated/
+assets/birds/png_before_ai_20260716/
+assets/birds/oiseaux_hd/*.webp

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Hibou moyen-duc</title>
+  <desc id="desc">Remplacer ce fichier par un screenshot du jeu.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1f6"/>
+      <stop offset=".55" stop-color="#e7f9ff"/>
+      <stop offset="1" stop-color="#ecffd9"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="620" fill="url(#bg)"/>
+  <path d="M0 430c155-78 286-91 417-36 120 50 241 42 483-74v300H0Z" fill="#b7e294"/>
+  <g transform="translate(450 280)">
+    <path d="M-114 130c-57-99-39-218 74-247 95-24 176 35 185 123 10 101-67 167-162 167-43 0-76-13-97-43Z" fill="#9d8a76"/>
+    <path d="M-101-65c-22-43-34-72-32-107 38 12 62 38 75 76Z" fill="#7d6c63"/>
+    <path d="M66-83c23-39 50-62 87-70-3 37-18 67-46 103Z" fill="#7d6c63"/>
+    <circle cx="-45" cy="-7" r="36" fill="#ffd36e"/>
+    <circle cx="57" cy="-7" r="36" fill="#ffd36e"/>
+    <circle cx="-45" cy="-7" r="12" fill="#332f35"/>
+    <circle cx="57" cy="-7" r="12" fill="#332f35"/>
+    <path d="M6 12 35 46H-22Z" fill="#e48966"/>
+    <path d="M-115 80c68-23 146-26 235-3" fill="none" stroke="#5f504a" stroke-width="18" stroke-linecap="round"/>
+  </g>
+  <g font-family="Inter, Segoe UI, sans-serif" text-anchor="middle">
+    <rect x="235" y="35" width="430" height="70" rx="35" fill="#fffffb" opacity=".88"/>
+    <text x="450" y="80" fill="#332f35" font-size="28" font-weight="800">Screenshot à ajouter</text>
+  </g>
+</svg>
