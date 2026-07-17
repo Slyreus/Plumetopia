@@ -2,20 +2,6 @@
 
 Plumetopia est un guide francophone, mobile-first et non officiel des oiseaux de Heartopia, développé par **Slyreus**. La version locale contient 97 fiches interactives avec recherche, priorités météo, périodes, zones, niveaux de passion et carnet synchronisable.
 
-## Ouvrir le site
-
-Le site doit être servi par HTTP : ne double-cliquez pas sur `index.html`, car les navigateurs bloquent ses modules JavaScript en mode `file://`.
-
-Dans PowerShell, placez-vous dans le dossier du projet puis lancez :
-
-```powershell
-npm.cmd start
-```
-
-Puis ouvrez `http://localhost:8000/`.
-
-La commande utilise uniquement Node.js et sert les gros PNG en flux continu. Si npm n'est pas disponible, l'équivalent direct est `node .\scripts\serve.mjs`.
-
 ## Images
 
 Les 97 fiches utilisent les détourage HD en PNG du dossier `assets/birds/oiseaux_hd/`. Le nom anglais de chaque fichier est associé à l'identifiant interne de la fiche ; les sept écarts historiques sont documentés explicitement dans `data/birds.js` afin de garantir une correspondance bijective.
