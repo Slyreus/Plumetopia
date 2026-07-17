@@ -17,7 +17,7 @@ test("la base contient 77 oiseaux principaux et 20 oiseaux événementiels", () 
   assert.equal(new Set(INITIAL_BIRDS.map((bird) => bird.id)).size, 97);
 });
 
-test("la Collection principale reproduit exactement le classeur validé en jeu", () => {
+test("la Collection principale reproduit la référence validée et harmonisée", () => {
   const weatherValues = {
     "/": WEATHER_OPTIONS,
     "Arc-en-ciel": ["Arc-en-ciel"],
@@ -181,6 +181,35 @@ test("la seconde zone de l'Event Oiseau est présentée comme un bonus", () => {
   assert.ok(MAIN_COLLECTION_REFERENCE_ROWS.every((row) => !row.location.includes("2e zone")));
 });
 
+test("les localisations publiques sont harmonisées sans anciens doublons", () => {
+  const aegithalos = INITIAL_BIRDS.find((bird) => bird.id === "long-tailed-tit");
+  const zones = new Set(INITIAL_BIRDS.flatMap((bird) => bird.zones));
+  const obsoleteLabels = [
+    "Sommet de tête de Blanc",
+    "Mont Onsen",
+    "Mont Onsen — lac du cratère",
+    "Montagne thermale - Lac Volcanique",
+    "Lac de Banlieue",
+    "Lac Montagne Thermale",
+    "Lac de Montagne thermale",
+    "Champ de fleurs - Plage Violette",
+    "Champ de fleurs - Moulin à vent",
+    "Champs de fleurs - Moulins à vent",
+    "Forêt - Tour faon",
+    "Forêt - Forêt de chênes spirituel",
+    "Mer calme",
+  ];
+
+  assert.deepEqual(aegithalos?.zones, ["Montagne de baleine"]);
+  assert.equal(zones.size, 46);
+  assert.ok(obsoleteLabels.every((label) => !zones.has(label)));
+  assert.equal(
+    INITIAL_BIRDS.filter((bird) => bird.zones.includes("Montagne thermale - Lac volcanique"))
+      .length,
+    3,
+  );
+});
+
 test("chaque oiseau possède une fiche statique indexable reliée au catalogue", async () => {
   const birdPageDirectory = path.join(rootDirectory, "oiseaux");
   const birdPages = (await readdir(birdPageDirectory)).filter((name) => name.endsWith(".html"));
@@ -215,10 +244,16 @@ test("chaque oiseau possède une fiche statique indexable reliée au catalogue",
     path.join(birdPageDirectory, "african-olive-pigeon.html"),
     "utf8",
   );
+  const aegithalosPage = await readFile(
+    path.join(birdPageDirectory, "long-tailed-tit.html"),
+    "utf8",
+  );
   assert.match(samplePage, /<title>[^<]+Heartopia[^<]+Plumetopia<\/title>/);
   assert.match(samplePage, /type="application\/ld\+json"/);
   assert.match(samplePage, /African Olive Pigeon/);
   assert.match(samplePage, /index, follow/);
+  assert.match(aegithalosPage, /Montagne de baleine/);
+  assert.doesNotMatch(aegithalosPage, /Sommet de tête de Blanc/);
   assert.match(html, /id="detailMapButton"/);
   assert.doesNotMatch(html, /detailPermalink|Voir la page complète/);
 });
