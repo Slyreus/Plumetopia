@@ -20,6 +20,7 @@ const rootFiles = [
   "admin.js",
   "auth.js",
   "backend.js",
+  "googlecbcd18f0cc8cb95a.html",
   "site-config.js",
   "manifest.webmanifest",
   "styles.css",

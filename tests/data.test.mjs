@@ -187,9 +187,19 @@ test("chaque oiseau possède une fiche statique indexable reliée au catalogue",
   const html = await readFile(path.join(rootDirectory, "index.html"), "utf8");
   const sitemap = await readFile(path.join(rootDirectory, "sitemap.xml.example"), "utf8");
   const app = await readFile(path.join(rootDirectory, "app.js"), "utf8");
+  const pagesBuild = await readFile(path.join(rootDirectory, "scripts", "build-pages.mjs"), "utf8");
+  const googleVerification = await readFile(
+    path.join(rootDirectory, "googlecbcd18f0cc8cb95a.html"),
+    "utf8",
+  );
   assert.equal(birdPages.length, INITIAL_BIRDS.length);
   assert.match(app, /\.\/oiseaux\/\$\{encodeURIComponent\(bird\.slug \|\| bird\.id\)\}\.html/);
   assert.match(app, /new URLSearchParams\(window\.location\.search\)\.get\("oiseau"\)/);
+  assert.match(pagesBuild, /"googlecbcd18f0cc8cb95a\.html"/);
+  assert.equal(
+    googleVerification.trim(),
+    "google-site-verification: googlecbcd18f0cc8cb95a.html",
+  );
   assert.equal((sitemap.match(/<url>/g) || []).length, INITIAL_BIRDS.length + 1);
   for (const bird of INITIAL_BIRDS) {
     assert.ok(birdPages.includes(`${bird.slug}.html`), bird.slug);
