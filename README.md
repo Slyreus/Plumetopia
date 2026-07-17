@@ -8,12 +8,6 @@ Les 97 fiches utilisent les détourage HD en PNG du dossier `assets/birds/oiseau
 
 Les WebP d'origine restent dans le même dossier comme sources non destructives. Une URL HTTPS ou un autre chemin d'image peut toujours être défini fiche par fiche depuis l'administration.
 
-## Administration
-
-La connexion Discord est ouverte à tous les joueurs afin de synchroniser leur carnet. L'identifiant Discord inscrit dans la liste blanche sécurisée reçoit automatiquement un bouton flottant **ADMIN** après connexion.
-
-Le bouton n'accorde aucun droit à lui seul : Supabase vérifie l'identité Discord, la liste blanche, les politiques RLS et le TOTP avant chaque écriture. Sans backend configuré, la connexion et l'administration demeurent verrouillées. Le guide complet est dans `supabase/README.md` et `supabase/schema.sql`.
-
 ## Logique météo
 
 L'arc-en-ciel rend tous les oiseaux observables. Le filtre météo sert donc à afficher les oiseaux à **prioriser**, et non tous ceux techniquement compatibles :
