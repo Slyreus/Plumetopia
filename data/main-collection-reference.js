@@ -17,7 +17,7 @@ export const MAIN_COLLECTION_REFERENCE_ROWS = Object.freeze([
   { id: "greater-flamingo", name: "Grand flamant", location: "Bord de l’eau", weather: "/", schedule: "/", level: 1 },
   { id: "blue-peafowl", name: "Paon bleu", location: "Event Oiseau", weather: "/", schedule: "/", level: 1 },
   { id: "mallard", name: "Canard colvert", location: "Lac", weather: "/", schedule: "/", level: 1 },
-  { id: "long-tailed-tit", name: "Aegithalos caudatus", location: "Montagne de baleine", weather: "/", schedule: "/", level: 1 },
+  { id: "long-tailed-tit", name: "Aegithalos caudatus", location: "Sommet de tête de Blanc", weather: "/", schedule: "/", level: 1 },
   { id: "eurasian-nuthatch", name: "Sittelle", location: "Village de pêcheurs", weather: "/", schedule: "/", level: 2 },
   { id: "bearded-reedling", name: "Panure à moustaches", location: "Montagne thermale", weather: "/", schedule: "/", level: 2 },
   { id: "woodchat-shrike", name: "Pie-grèche à tête rousse", location: "Banlieue", weather: "/", schedule: "/", level: 2 },

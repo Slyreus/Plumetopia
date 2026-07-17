@@ -185,7 +185,6 @@ test("les localisations publiques sont harmonisées sans anciens doublons", () =
   const aegithalos = INITIAL_BIRDS.find((bird) => bird.id === "long-tailed-tit");
   const zones = new Set(INITIAL_BIRDS.flatMap((bird) => bird.zones));
   const obsoleteLabels = [
-    "Sommet de tête de Blanc",
     "Mont Onsen",
     "Mont Onsen — lac du cratère",
     "Montagne thermale - Lac Volcanique",
@@ -200,7 +199,7 @@ test("les localisations publiques sont harmonisées sans anciens doublons", () =
     "Mer calme",
   ];
 
-  assert.deepEqual(aegithalos?.zones, ["Montagne de baleine"]);
+  assert.deepEqual(aegithalos?.zones, ["Sommet de tête de Blanc"]);
   assert.equal(zones.size, 46);
   assert.ok(obsoleteLabels.every((label) => !zones.has(label)));
   assert.equal(
@@ -272,8 +271,7 @@ test("chaque oiseau possède une fiche statique indexable reliée au catalogue",
   assert.match(samplePage, /type="application\/ld\+json"/);
   assert.match(samplePage, /African Olive Pigeon/);
   assert.match(samplePage, /index, follow/);
-  assert.match(aegithalosPage, /Montagne de baleine/);
-  assert.doesNotMatch(aegithalosPage, /Sommet de tête de Blanc/);
+  assert.match(aegithalosPage, /Sommet de tête de Blanc/);
   assert.match(html, /id="detailMapButton"/);
   assert.doesNotMatch(html, /detailPermalink|Voir la page complète/);
 });

@@ -383,7 +383,7 @@ const RAW_BIRDS = [
     id: "long-tailed-tit",
     name: "Mésange à longue queue",
     englishName: "Long-Tailed Tit",
-    zones: ["Montagne de baleine"],
+    zones: ["Sommet de tête de Blanc"],
     unlockLevel: 1,
     details: "Emplacement insolite : cherchez directement sur la tête de Blanc.",
     category: "Passereaux",
