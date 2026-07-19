@@ -323,7 +323,7 @@ test("la page principale n'a pas d'identifiants HTML dupliqués", async () => {
   assert.doesNotMatch(html, />4<\/dt>[\s\S]*?<dd>périodes<\/dd>/);
   const heroTitle = html.match(/<h1 id="heroTitle">([\s\S]*?)<\/h1>/)?.[1] || "";
   assert.doesNotMatch(heroTitle, /<br\s*\/?\s*>/i);
-  assert.match(html, /<time datetime="2026-07-16">Mis à jour le 16 juillet 2026<\/time>/);
+  assert.match(html, /<time datetime="2026-07-19">Mis à jour le 19 juillet 2026<\/time>/);
   assert.match(html, /class="hero-summary"/);
   assert.match(html, /assets\/brand\/favicon-64\.png/);
   assert.match(html, /<title>Plumetopia — Tous les oiseaux de Heartopia<\/title>/);
