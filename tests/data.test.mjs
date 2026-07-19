@@ -11,10 +11,10 @@ import {
 } from "../data/main-collection-reference.js";
 
 const rootDirectory = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-test("la base contient 77 oiseaux principaux et 20 oiseaux événementiels", () => {
+test("la base contient 77 oiseaux principaux et 21 oiseaux événementiels", () => {
   assert.equal(MAIN_COLLECTION_REFERENCE_ROWS.length, 77);
-  assert.equal(INITIAL_BIRDS.length, 97);
-  assert.equal(new Set(INITIAL_BIRDS.map((bird) => bird.id)).size, 97);
+  assert.equal(INITIAL_BIRDS.length, 98);
+  assert.equal(new Set(INITIAL_BIRDS.map((bird) => bird.id)).size, 98);
 });
 
 test("la Collection principale reproduit la référence validée et harmonisée", () => {
@@ -134,7 +134,7 @@ test("les oiseaux spéciaux sont répartis dans quatre collections dédiées", (
     "saison-du-givre": 5,
     "rues-modulaires": 5,
     "cinematiques-oniriques": 5,
-    "appel-des-baleines": 5,
+    "appel-des-baleines": 6,
   });
 });
 
@@ -179,6 +179,24 @@ test("la seconde zone de l'Event Oiseau est présentée comme un bonus", () => {
     ["green-peafowl", "white-peafowl"],
   );
   assert.ok(MAIN_COLLECTION_REFERENCE_ROWS.every((row) => !row.location.includes("2e zone")));
+});
+
+test("les oiseaux de la Saison des baleines utilisent les données corrigées", () => {
+  const roseateSpoonbill = INITIAL_BIRDS.find((bird) => bird.id === "roseate-spoonbill");
+  const wanderingAlbatross = INITIAL_BIRDS.find((bird) => bird.id === "wandering-albatross");
+  const sootyAlbatross = INITIAL_BIRDS.find((bird) => bird.id === "grey-mantled-albatross");
+  const pomarineSkua = INITIAL_BIRDS.find((bird) => bird.id === "pomarine-skua");
+
+  assert.equal(roseateSpoonbill?.name, "Spatule rosée");
+  assert.deepEqual(roseateSpoonbill?.zones, ["Évènement Oiseau égaré"]);
+  assert.deepEqual(roseateSpoonbill?.weather, WEATHER_OPTIONS);
+  assert.deepEqual(roseateSpoonbill?.periods, PERIOD_OPTIONS);
+  assert.equal(getEventCatalog(roseateSpoonbill?.event)?.id, "appel-des-baleines");
+  assert.deepEqual(wanderingAlbatross?.zones, ["Champ de fleurs - Plage violette"]);
+  assert.equal(sootyAlbatross?.name, "Albatros fuligineux");
+  assert.deepEqual(sootyAlbatross?.zones, ["Montagne thermale - Falaise rocheuse"]);
+  assert.deepEqual(pomarineSkua?.zones, ["Champ de fleurs"]);
+  assert.ok(INITIAL_BIRDS.every((bird) => !bird.zones.includes("Plage d'Améthyste")));
 });
 
 test("les localisations publiques sont harmonisées sans anciens doublons", () => {
@@ -330,7 +348,7 @@ test("la page principale n'a pas d'identifiants HTML dupliqués", async () => {
   assert.match(styles, /\.game-tip/);
   assert.match(styles, /\.discord-login-shell\.is-unavailable:hover \.discord-login-tooltip/);
   assert.match(html, /"@type": "ItemList"/);
-  assert.match(html, /"numberOfItems": 97/);
+  assert.match(html, /"numberOfItems": 98/);
   assert.match(app, /const GAME_TIPS = Object\.freeze\(\[/);
   assert.match(app, /Bailey/);
   assert.match(app, /Chaque jour, donne cinq cartes d’oiseaux à Bailey/);

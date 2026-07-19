@@ -1,4 +1,4 @@
-import { INITIAL_BIRDS, PERIOD_OPTIONS, WEATHER_OPTIONS } from "./data/birds.js?v=20260716.11";
+import { INITIAL_BIRDS, PERIOD_OPTIONS, WEATHER_OPTIONS } from "./data/birds.js?v=20260719.1";
 import {
   getCurrentAuthState,
   signInWithDiscord,

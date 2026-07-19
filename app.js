@@ -1,4 +1,4 @@
-import { INITIAL_BIRDS, PERIOD_OPTIONS, WEATHER_OPTIONS } from "./data/birds.js?v=20260717.1";
+import { INITIAL_BIRDS, PERIOD_OPTIONS, WEATHER_OPTIONS } from "./data/birds.js?v=20260719.1";
 import { EVENT_CATALOGS, getEventCatalog } from "./data/events.js?v=20260716.5";
 import {
   saveRemoteObservation,
